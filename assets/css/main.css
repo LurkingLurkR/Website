@@ -1816,3 +1816,51 @@ input, select, textarea {
 #back-to-top:active {
     background-color: rgba(255, 255, 255, 0.175);
 }
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Solid background */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Keeps the box size */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 50px; /* Fixed width for consistency */
+    height: 50px; /* Fixed height for consistency */
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.9); /* Darker on hover */
+}
+
+/* Position arrows relative to the lightbox content */
+.prev {
+    left: 400px; /* Positions just outside the left edge of the image */
+}
+
+.next {
+    right: 400px; /* Positions just outside the right edge of the image */
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    position: relative; /* Ensures arrows are positioned relative to the image */
+}

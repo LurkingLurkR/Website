@@ -535,3 +535,59 @@ document.addEventListener("DOMContentLoaded", function() {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const close = document.getElementById('close');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const images = document.querySelectorAll('.image img');
+    let currentIndex = 0;
+
+    // Open lightbox when clicking an image
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            showImage(index);
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    // Close lightbox
+    close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Previous image
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Next image
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            } else if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        }
+    });
+
+    // Function to show image
+    function showImage(index) {
+        lightboxContent.src = images[index].src;
+        lightboxContent.alt = images[index].alt;
+    }
+});
