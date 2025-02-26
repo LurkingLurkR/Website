@@ -1690,6 +1690,65 @@ body.is-preload #footer {
     transform: translateX(-50%);
 }
 
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+@media screen and (max-width: 736px) {
+    #lightbox-content {
+        max-width: 85%;
+    }
+    .nav-arrow {
+        font-size: 24px;
+        padding: 5px;
+    }
+    #prev {
+        left: 5px;
+    }
+    #next {
+        right: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-arrow {
+        font-size: 20px;
+        padding: 3px;
+        top: auto;
+        bottom: 20px;
+    }
+    #prev {
+        left: 10px;
+    }
+    #next {
+        right: 10px;
+    }
+}
+
+/* Custom adjustments for image section */
+
 #image-section .image:before {
     content: none;
     background-image: none;
