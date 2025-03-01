@@ -717,6 +717,7 @@ ul {
 
 ul li {
     padding-left: 0.5em;
+    background-color: rgba(27, 31, 34, 0.50);
 }
 
 ul.alt {
@@ -1105,12 +1106,12 @@ button {
     -webkit-transition: background-color 2.5s ease-in-out;
     -ms-transition: background-color 2.5s ease-in-out;
     transition: background-color 2.5s ease-in-out;
-    -moz-transition-delay: 0.75s;
+    /* -moz-transition-delay: 0.75s;
     -webkit-transition-delay: 0.75s;
     -ms-transition-delay: 0.75s;
-    transition-delay: 0.75s;
-    background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-    background-size: auto, 256px 256px;
+    transition-delay: 0.75s; */
+    background-image: url("../../images/pd/after\ 10\ pd.JPG");
+
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     z-index: 2;
@@ -1215,10 +1216,11 @@ body.is-preload #bg:before {
     -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-    background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+    /* background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
     background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
     background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-    background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
+    background-color: rgba(27, 31, 34, 0.85);
     max-width: 100%;
     text-align: center;
 }
@@ -1236,10 +1238,10 @@ body.is-preload #bg:before {
     content: '';
     display: block;
     position: absolute;
-    top: calc(-3.5rem - 1px);
+    /* top: calc(-3.5rem - 1px); */
     left: calc(50% - 1px);
     width: 1px;
-    height: calc(3.5rem + 1px);
+    /* height: calc(3.5rem + 1px); */
     background: #ffffff;
 }
 
@@ -1266,8 +1268,8 @@ body.is-preload #bg:before {
 #header .content {
     border-style: solid;
     border-color: #ffffff;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
+    /* border-top-width: 1px;
+    border-bottom-width: 1px; */
     max-width: 100%;
 }
 
@@ -1745,4 +1747,52 @@ body.is-preload #footer {
     #next {
         right: 10px;
     }
+}
+
+#work {
+    /* background-color: #000000 !important; */
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    margin-top: 2rem;
+    position: relative;
+    width: 80rem;
+    max-width: 100%;
+    background-color: rgba(27, 31, 34, 0.85);
+    border-radius: 4px;
+}
+
+#gallery {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+#gallery li {
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding-right: 20px;
+}
+
+#galleryNav {
+    padding: 14px 16px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+#close2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    text-indent: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
 }
