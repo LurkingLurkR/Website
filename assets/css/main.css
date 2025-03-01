@@ -1238,7 +1238,7 @@ body.is-preload #bg:before {
     position: absolute;
     top: calc(-3.5rem - 1px);
     left: calc(50% - 1px);
-    width: 1px;
+    /* width: 1px; */
     height: calc(3.5rem + 1px);
     background: #ffffff;
 }
@@ -1266,8 +1266,8 @@ body.is-preload #bg:before {
 #header .content {
     border-style: solid;
     border-color: #ffffff;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
+    /* border-top-width: 1px; */
+    /* border-bottom-width: 1px; */
     max-width: 100%;
 }
 
