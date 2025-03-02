@@ -1672,9 +1672,9 @@ body.is-preload #footer {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
+    width: relative;
+    padding: 30px;
+    margin-top: auto;
     color: #ffffff; /* Matches your theme */
     font-weight: bold;
     font-size: 20px;
@@ -1683,13 +1683,13 @@ body.is-preload #footer {
     -webkit-transition: background-color 0.2s ease-in-out;
     -ms-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
-    background: rgba(255, 255, 255, 0.075); /* Consistent with button hovers */
-    border-radius: 4px; /* Matches your theme */
+    background: black;
+    /* border-radius: 4px; */
 }
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-    background: rgba(255, 255, 255, 0.175); /* Matches your :active states */
+    background: black;
 }
 
 .lightbox-prev {
