@@ -1109,6 +1109,7 @@ button {
     background-image: url("../../images/pd/after\ 10\ pd.JPG");
     background-position: center, center;
     background-repeat: no-repeat, repeat;
+    background-size: 100% 100%;
     z-index: 2;
 }
 
