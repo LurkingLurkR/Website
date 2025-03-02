@@ -1281,7 +1281,7 @@ body.is-preload #bg:before {
 #header .content p {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 2;
 }
 
@@ -1566,8 +1566,8 @@ body.is-preload #header .content .inner {
 
 #footer .copyright {
     letter-spacing: 0.2rem;
-    font-size: 0.6rem;
-    opacity: 0.75;
+    font-size: 0.8rem;
+    opacity: 1;
     margin-bottom: 0;
     text-transform: uppercase;
 }
