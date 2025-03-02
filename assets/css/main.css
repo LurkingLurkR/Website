@@ -716,8 +716,8 @@ ul {
 }
 
 ul li {
-    padding-left: 0.5em;
-    background-color: rgba(27, 31, 34, 0.50);
+    /* padding-left: 0.5em;
+    background-color: rgba(27, 31, 34, 0.50); */
 }
 
 ul.alt {
@@ -1270,7 +1270,7 @@ body.is-preload #bg:before {
     -webkit-transition-delay: 0.25s;
     -ms-transition-delay: 0.25s;
     transition-delay: 0.25s;
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
     max-height: 40rem;
     overflow: hidden;
 }
@@ -1771,4 +1771,11 @@ body.is-preload #footer {
     text-indent: 4rem;
     overflow: hidden;
     white-space: nowrap;
+}
+.subtitle{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    line-height: 2;
+    padding: 20px;
 }
