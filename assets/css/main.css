@@ -1109,6 +1109,7 @@ button {
     background-image: url("../../images/pd/after\ 10\ pd.JPG");
     background-position: center, center;
     background-repeat: no-repeat, repeat;
+    background-size: 100% 100%;
     z-index: 2;
 }
 
@@ -1383,7 +1384,6 @@ body.is-preload #header .content .inner {
     }
     #header > *:before {
         top: calc(-2rem - 1px);
-        height: calc(2rem + 1px);
     }
     #header .logo {
         width: 4.75rem;
@@ -1749,7 +1749,7 @@ body.is-preload #footer {
     float: left;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2;
     padding-right: 20px;
 }
