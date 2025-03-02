@@ -1684,7 +1684,6 @@ body.is-preload #footer {
     -ms-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
     background: black;
-    /* border-radius: 4px; */
 }
 
 .lightbox-prev:hover,
