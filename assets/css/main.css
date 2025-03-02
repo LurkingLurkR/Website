@@ -625,7 +625,7 @@ input[type="radio"] + label:before {
     position: relative;
 }
 
-.image:before {
+#work .image:before {
     pointer-events: none;
     background-image: url("../../images/overlay.png");
     background-color: rgba(19, 21, 25, 0.5);
@@ -1106,12 +1106,7 @@ button {
     -webkit-transition: background-color 2.5s ease-in-out;
     -ms-transition: background-color 2.5s ease-in-out;
     transition: background-color 2.5s ease-in-out;
-    /* -moz-transition-delay: 0.75s;
-    -webkit-transition-delay: 0.75s;
-    -ms-transition-delay: 0.75s;
-    transition-delay: 0.75s; */
     background-image: url("../../images/pd/after\ 10\ pd.JPG");
-
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     z-index: 2;
@@ -1216,10 +1211,6 @@ body.is-preload #bg:before {
     -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-    /* background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-    background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-    background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-    background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
     background-color: rgba(27, 31, 34, 0.85);
     max-width: 100%;
     text-align: center;
@@ -1238,10 +1229,8 @@ body.is-preload #bg:before {
     content: '';
     display: block;
     position: absolute;
-    /* top: calc(-3.5rem - 1px); */
     left: calc(50% - 1px);
     width: 1px;
-    /* height: calc(3.5rem + 1px); */
     background: #ffffff;
 }
 
@@ -1268,8 +1257,6 @@ body.is-preload #bg:before {
 #header .content {
     border-style: solid;
     border-color: #ffffff;
-    /* border-top-width: 1px;
-    border-bottom-width: 1px; */
     max-width: 100%;
 }
 
@@ -1635,122 +1622,113 @@ body.is-preload #footer {
     width: 100%;
     height: auto;
     display: block;
+    cursor: pointer; /* Make gallery images clickable */
 }
 
 /* Lightbox */
 
-#lightbox {
+.lightbox {
+    display: none;
     position: fixed;
-    z-index: 1000;
-    top: 0;
+    z-index: 1000; /* Above #wrapper (z-index: 3) */
+    padding: 20px;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    justify-content: center;
+    background-color: rgba(27, 31, 34, 0.9); /* Matches your theme */
     align-items: center;
+    justify-content: center;
 }
 
-#lightbox-content {
+.lightbox img {
     max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+    border-radius: 4px; /* Consistent with your theme */
 }
 
-#close {
+.lightbox-close {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #ffffff; /* Matches your white text theme */
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
     cursor: pointer;
-    z-index: 1001;
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
-#close:hover, #close:focus {
-    color: #bbb;
-    text-decoration: none;
+.lightbox-close:hover {
+    color: rgba(255, 255, 255, 0.75); /* Consistent hover effect */
+}
+
+.lightbox-prev,
+.lightbox-next {
     cursor: pointer;
-}
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-    overflow: auto;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.nav-arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1001;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #ffffff; /* Matches your theme */
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.075); /* Consistent with button hovers */
+    border-radius: 4px; /* Matches your theme */
 }
 
-.nav-arrow:hover {
-    background: rgba(0, 0, 0, 0.7);
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.175); /* Matches your :active states */
 }
 
-#prev {
-    left: 10px;
+.lightbox-prev {
+    left: 20px;
 }
 
-#next {
-    right: 10px;
+.lightbox-next {
+    right: 20px;
 }
 
+/* Media Queries for Lightbox */
 @media screen and (max-width: 736px) {
-    #lightbox-content {
-        max-width: 85%;
+    .lightbox {
+        padding: 10px;
     }
-    .nav-arrow {
-        font-size: 24px;
-        padding: 5px;
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 16px;
+        padding: 10px;
     }
-    #prev {
-        left: 5px;
-    }
-    #next {
-        right: 5px;
+    .lightbox-close {
+        font-size: 30px;
+        top: 10px;
+        right: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .nav-arrow {
-        font-size: 20px;
-        padding: 5px;
-        top: 50%;
-        transform: translateY(-50%);
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 14px;
+        padding: 8px;
     }
-    #prev {
-        left: 10px;
-    }
-    #next {
-        right: 10px;
+    .lightbox-close {
+        font-size: 24px;
     }
 }
 
 #work {
-    /* background-color: #000000 !important; */
     padding: 2.5rem 2.5rem 1.5rem 2.5rem;
     margin-top: 2rem;
     position: relative;
@@ -1765,7 +1743,6 @@ body.is-preload #footer {
     margin: 0;
     padding: 0;
     overflow: hidden;
-
 }
 
 #gallery li {
@@ -1782,7 +1759,6 @@ body.is-preload #footer {
     text-align: center;
     overflow: hidden;
 }
-
 
 #close2 {
     display: block;
