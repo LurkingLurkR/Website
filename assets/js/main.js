@@ -347,4 +347,31 @@
         });
     });
 
+    // Back to Top Button
+document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.getElementById('back-to-top');
+
+    // Show/hide button on scroll
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) { // Show after scrolling 300px
+            backToTopButton.style.display = 'block';
+            backToTopButton.style.opacity = '1';
+        } else {
+            backToTopButton.style.opacity = '0';
+            setTimeout(() => {
+                backToTopButton.style.display = 'none';
+            }, 200); // Match CSS transition duration
+        }
+    });
+
+    // Smooth scroll to top on click
+    backToTopButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
 })(jQuery);
