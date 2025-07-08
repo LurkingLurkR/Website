@@ -1252,13 +1252,13 @@ body.is-preload #bg:before {
 
 @media screen and (max-width: 736px) {
     #header .content .inner .header-logo {
-        max-width: 200px; /* Reduced from 150px */
+        max-width: 400px; /* Reduced from 150px */
     }
 }
 
 @media screen and (max-width: 480px) {
     #header .content .inner .header-logo {
-        max-width: 150px; /* Reduced from 120px */
+        max-width: 300px; /* Reduced from 120px */
     }
 }
 
@@ -1417,7 +1417,7 @@ body.is-preload #header .content .inner {
         padding: 1.5rem 0;
     }
     #header .content .inner {
-        padding: 2.5rem 0;
+        padding: 2.5rem 30px;
     }
     #header nav ul {
         -moz-flex-direction: column;
